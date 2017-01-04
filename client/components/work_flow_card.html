@@ -1,0 +1,35 @@
+<template name="work_flow_card">
+<div class="uk-container uk-container-center uk-text-center">
+   <div class="uk-alert uk-alert-success" data-uk-alert>
+    <a href="" class="uk-alert-close uk-close"></a>
+     <p><i class="fa fa-life-ring" aria-hidden="true"> </i><b> TIP: </b>
+To indicate a message containing information for first time users. <br>Did you know you can export your workflow as a .pdf file and/or print it using the <b><i class="fa fa-file-pdf-o" aria-hidden="true"></i> | <i class="fa fa-print" aria-hidden="true"></i></b> icons to the top right of the page ! <br>   </p>
+</div>
+  <br><br>
+     <!--breadcrumb--> 
+        <div class="uk-width-1-2">
+ <div class="uk-panel">
+    
+     <h3 class="uk-panel-title uk-text-bold uk-text-large">WORK FLOW TOOL</h3>
+</div> 
+        </div>
+    
+
+
+   <!-- template canvas grid --> 
+   <div class="uk-align-right" data-uk-sticky="{bottom:100}">
+       
+       <button class="uk-button uk-icon-print" type="button">
+</button>
+       <button class="uk-button uk-icon-file-pdf-o" type="button">
+</button>
+       <button class="uk-button uk-icon-share-alt" type="button"></button>
+    
+    </div>  
+    <hr>
+    <br><br>
+    
+    
+    {{>work_flow_table}}
+    </div>
+</template>

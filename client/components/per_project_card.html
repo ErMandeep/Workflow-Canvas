@@ -1,0 +1,81 @@
+
+
+<template name="work_flow_table">
+  
+    
+    <!-- This is the modal -->
+<div id="create-new-workflow" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">Adding new Workflow Sequence(s)</div>
+        
+         <form>
+        <input type="text" placeholder="Event Trigger ..." name="Trigger">
+         <input type="text" placeholder="Event Condition ..." name="Condition">
+         <input type="text" placeholder="Event Action ..." name="Action">
+         <input type="text" placeholder="Event Owner ..." name="Owner">
+         <input type="text" placeholder="Event Alert Message ..." name="AlertMessage">
+         <input type="text" placeholder="Event Message Recipient ..." name="AlertRecipient">
+           <hr>  
+          <input type="submit" value=" + Add a Sequence">
+           
+        
+    </form>
+          
+    </div>
+    </div>
+    
+    <button class="uk-button" data-uk-modal="{target:'#create-new-workflow'}"> + Create a new Workflow Sequence</button>
+    <!-- This is the table --> 
+    
+  <table class="uk-table" >
+   
+    <thead style="background-color:#FAE87B;">
+        <tr>
+            <th><i class="fa fa-bullseye"></i> Trigger</th>
+            <th><i class="fa fa-flag"></i> Condition</th>
+            <th><i class="fa fa-bullhorn"></i> Action</th>
+            <th><i class="fa fa-user"></i> Owner</th>
+            <th><i class="fa fa-commenting"></i> Alert Message</th>
+            <th><i class="fa fa-send"></i> Alert Recipient</th>
+            <!--<th></th>-->
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody><br>
+        {{#each workflow_seq}}
+        <tr>
+            
+            <td>{{trigger}}</td>
+            <td>{{condition}}</td>
+            <td>{{action}}</td>
+            <td>{{owner}}</td>
+            <td><i class="fa fa-quote-left"></i> {{alertmsg}} <i class="fa fa-quote-right"></i></td>
+            <td>{{alertrecipient}}</td>
+           <!-- <td><button class="uk-button edit-workflow"><i class="fa fa-edit"></i></button></td>-->
+            <td><button class="uk-button uk-button-danger delete-workflow" style="#f5f5f5;"><i class="fa fa-trash"></i></button></td>
+        </tr>
+        {{else}}
+        <br>
+        <p> No workflow sequences found. Please create <a href="#" data-uk-modal="{target:'#create-new-workflow'}">one</a> ! </p>
+        {{/each}}
+    </tbody>
+</table>   
+    
+    <hr>
+    <h3 style="background-color:#FAE87B;"> Map Sequences -- Workflow Visual Chart </h3>
+    
+     <div class="uk-alert uk-alert-success" data-uk-alert>
+    <a href="" class="uk-alert-close uk-close"></a>
+      <p><i class="fa fa-life-ring" aria-hidden="true"> </i><b> TIP: </b>
+          This open-source version will not save your visual chart locally. <br> Did you know you can export your visual as a .png image file using the <b>EXPORT</b> button at the bottom of the chart canvas.<br>   </p></div>
+         
+         <br>
+    {{>orgchart}}
+    <br>
+    
+    
+</template>
+

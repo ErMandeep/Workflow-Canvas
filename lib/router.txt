@@ -1,0 +1,26 @@
+Router.route('/brandboard/:_id', {
+    name: 'brandboarditem',
+    template: 'brand_board_home',
+    data: function(){
+        
+        var currentBoard = this.params._id;
+        
+        var user_placeholder = Meteor.userId();
+        
+        return Brandboards.findOne({ _id: currentBoard, createdOn: user_placeholder });
+    },
+    onBeforeAction: function(){
+        var user_placeholder = Meteor.userId();
+        if(user_placeholder){
+            this.next();
+        } else {
+            this.render("landing");
+        }
+    },
+    subscriptions: function(){
+        
+        var currentDetails = this.params._id;
+        return [ Meteor.subscribe('logodesigns'),Meteor.Meteor.subscribe('logovariations'),Meteor.Meteor.subscribe('colorpallete'),Meteor.Meteor.subscribe('fonts'),Meteor.Meteor.subscribe('icons'),Meteor.Meteor.subscribe('backgroundpatterns'),Meteor.Meteor.subscribe('inspirationimgs'), Meteor.subscribe('brandboards', currentDetails) ];
+        //add all lists
+    }
+});
