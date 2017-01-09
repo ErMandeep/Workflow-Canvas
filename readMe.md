@@ -14,7 +14,7 @@ A simple but effecive application tool for capturing organizational activity flo
 
 # MIT LICENSE
 
-- Copyright (c) <2016> <copyright Social Lantern Media>
+- Copyright (c) <2016> <copyright> Social Lantern Media
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
