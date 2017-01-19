@@ -4,12 +4,11 @@ A simple but effecive application tool for capturing organizational activity flo
 
 # Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
 
-** Edit existing list fields. 
-** Share the URL.
-** Print the page directly. 
-** Download as a PDF.
-** JSON search list.
-***Import to node-organization table
+- Edit existing list fields. 
+- Share the URL.
+- Download as a PDF.
+- JSON search list.
+- Import column lists to node-organization table
 
 
 # MIT LICENSE
