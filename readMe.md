@@ -1,4 +1,6 @@
-A simple but effecive application tool for capturing organizational personal, QA activity flow &or index-page flow mapping. Plus you can save the tree as a png. 
+A simple but effecive application tool for capturing and plotting information in a hierarchical tree chart. Great for surveys, infographic Q/A behavior charting and ranking. 
+
+Features re-arrangable cells and save as png file.
 
 ![workflow](https://cloud.githubusercontent.com/assets/23016977/21630466/457abfb0-d229-11e6-9820-5b418b86da23.jpg)
 
